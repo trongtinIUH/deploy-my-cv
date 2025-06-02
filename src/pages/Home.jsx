@@ -5,6 +5,7 @@ import '../css/style.css';
 const Home = () => {
 const backendSkills = [
   { name: "Java", percent: 90 },
+  
   { name: "Spring Boot", percent: 85 },
   { name: "Node.js", percent: 70 },
   { name: "React.js", percent: 75 },
