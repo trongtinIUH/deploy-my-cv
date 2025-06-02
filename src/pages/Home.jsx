@@ -195,20 +195,11 @@ const otherSkills = [
         </p>
         <div className="portfolio-gallery">
           <div className="portfolio-item">
-            <img src="https://i.imgur.com/1.png" alt="Karaoke Management App" />
-            <h3>Karaoke Management App</h3>
-            <p>Java GUI, RMI, JPA, SQL Server</p>
+            <img src="https://i.imgur.com/1.png" alt="APP CHAT ZOLO (WEB APP & MOBILE)" />
+            <h3>APP CHAT ZOLO (WEB APP & MOBILE)</h3>
+            <p>BE: Spring Boot, AWS (Cognito, S3, DynamoDB)<br/>FE: ReactJS, WebSocket</p>
           </div>
-          <div className="portfolio-item">
-            <img src="https://i.imgur.com/2.png" alt="Food Delivery App" />
-            <h3>Food Delivery App</h3>
-            <p>React Native, Node.js, MongoDB</p>
-          </div>
-          <div className="portfolio-item">
-            <img src="https://i.imgur.com/3.png" alt="E-commerce Website" />
-            <h3>E-commerce Website</h3>
-            <p>ReactJS, Spring Boot, AWS</p>
-          </div>
+         
         </div>
       </section>
 
