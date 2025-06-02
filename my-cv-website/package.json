@@ -1,0 +1,21 @@
+{
+  "name": "my-cv-website",
+  "version": "1.0.0",
+  "description": "A personal CV website to showcase my skills and experience.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build step not defined'"
+  },
+  "keywords": [
+    "cv",
+    "portfolio",
+    "website"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
