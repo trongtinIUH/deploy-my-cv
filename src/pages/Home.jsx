@@ -186,8 +186,31 @@ const otherSkills = [
       </div>
     </section>
 
-
-
+{/* --- Projects SECTION --- */}
+    
+      <section id="projects" className="portfolio-section">
+        <h2>My Projects</h2>
+        <p className="portfolio-intro">
+          Check out some of the projects I've worked on. These projects showcase my skills in software development, design, and problem-solving.
+        </p>
+        <div className="portfolio-gallery">
+          <div className="portfolio-item">
+            <img src="https://i.imgur.com/1.png" alt="Karaoke Management App" />
+            <h3>Karaoke Management App</h3>
+            <p>Java GUI, RMI, JPA, SQL Server</p>
+          </div>
+          <div className="portfolio-item">
+            <img src="https://i.imgur.com/2.png" alt="Food Delivery App" />
+            <h3>Food Delivery App</h3>
+            <p>React Native, Node.js, MongoDB</p>
+          </div>
+          <div className="portfolio-item">
+            <img src="https://i.imgur.com/3.png" alt="E-commerce Website" />
+            <h3>E-commerce Website</h3>
+            <p>ReactJS, Spring Boot, AWS</p>
+          </div>
+        </div>
+      </section>
 
     </div>
   );

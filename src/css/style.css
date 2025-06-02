@@ -307,3 +307,63 @@ html {
 .experience-details a:hover {
   text-decoration: underline;
 }
+
+/* === PORTFOLIO SECTION === */
+.portfolio-section {
+  padding: 80px 40px;
+  background-color: #181818;
+  text-align: center;
+}
+
+.portfolio-section h2 {
+  font-size: 32px;
+  color: #d9534f;
+  margin-bottom: 10px;
+}
+
+.portfolio-intro {
+  color: #bdbdbd;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.portfolio-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.portfolio-item {
+  background: #222;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  padding: 18px 18px 24px 18px;
+  width: 340px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-8px) scale(1.03);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  background: #fff;
+}
+
+.portfolio-item h3 {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.portfolio-item p {
+  color: #bdbdbd;
+  font-size: 15px;
+}
