@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../css/style.css';
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
@@ -27,17 +27,34 @@ const otherSkills = [
   { name: "Python", percent: 55 }
 ];
 
+const images = [
+  { src: process.env.PUBLIC_URL + "/imagezolo.png", alt: "APP CHAT ZOLO (WEB APP & MOBILE)" },
+  { src: process.env.PUBLIC_URL + "/imagezolo1.png", alt: "APP CHAT ZOLO - Mobile UI" },
+  { src: process.env.PUBLIC_URL + "/imagezolo2.png", alt: "APP CHAT ZOLO - Mobile UI" },
+  // Thêm nhiều hình khác nếu muốn
+];
+const images_track = [
+  { src: process.env.PUBLIC_URL + "/image_track01.png", alt: "APP CHAT ZOLO (WEB APP & MOBILE)" },
+  { src: process.env.PUBLIC_URL + "/image_track.png", alt: "APP CHAT ZOLO (WEB APP & MOBILE)" },
+  { src: process.env.PUBLIC_URL + "/image_track1.png", alt: "APP CHAT ZOLO - Mobile UI" },
+  { src: process.env.PUBLIC_URL + "/image_track2.png", alt: "APP CHAT ZOLO - Mobile UI" },
+    { src: process.env.PUBLIC_URL + "/image_track3.png", alt: "APP CHAT ZOLO - Mobile UI" },
+  // Thêm nhiều hình khác nếu muốn
+];
+const [currentImgZolo, setCurrentImgZolo] = useState(0);
+const [currentImgTrack, setCurrentImgTrack] = useState(0);
+
   return (
     <div>
       {/* --- HERO SECTION --- */}
       <section id="home" className="hero-section">
         <div className="hero-content">
-          <h1>UX/UI Developer</h1>
+          <h1>Full-Stack Developer | Cloud & Java Enthusiast</h1>
           <p>
-            I create user-friendly and responsive designs using <br />
-            frameworks like Bootstrap and React for a smooth user experience.
+            Final-year Software Engineering student with strong experience in building scalable web apps using
+            React, Spring Boot, and AWS. Passionate about crafting clean UI and robust backend systems.
           </p>
-        </div>
+      </div>
       </section>
 
       {/* --- ABOUT SECTION --- */}
@@ -195,13 +212,59 @@ const otherSkills = [
         </p>
         <div className="portfolio-gallery">
           <div className="portfolio-item">
-            <img src="https://i.imgur.com/1.png" alt="APP CHAT ZOLO (WEB APP & MOBILE)" />
+            <div className="portfolio-images-multi" style={{ position: 'relative', width: '100%', textAlign: 'center' }}>
+              <button onClick={() => setCurrentImgZolo((prev) => (prev - 1 + images.length) % images.length)} style={{ position: 'absolute', left: 0, top: '50%', transform: 'translateY(-50%)', zIndex: 2, fontSize: 24, background: 'rgba(0,0,0,0.3)', border: 'none', color: '#fff', cursor: 'pointer', borderRadius: '50%', width: 36, height: 36, lineHeight: '36px' }}>&lt;</button>
+              <img src={images[currentImgZolo].src} alt={images[currentImgZolo].alt} className='hien-thi-hinh-projects' />
+              <button onClick={() => setCurrentImgZolo((prev) => (prev + 1) % images.length)} style={{ position: 'absolute', right: 0, top: '50%', transform: 'translateY(-50%)', zIndex: 2, fontSize: 24, background: 'rgba(0,0,0,0.3)', border: 'none', color: '#fff', cursor: 'pointer', borderRadius: '50%', width: 36, height: 36, lineHeight: '36px' }}>&gt;</button>
+            </div>
             <h3>APP CHAT ZOLO (WEB APP & MOBILE)</h3>
             <p>BE: Spring Boot, AWS (Cognito, S3, DynamoDB)<br/>FE: ReactJS, WebSocket</p>
           </div>
          
+
+          <div className="portfolio-item">
+            <div className="portfolio-images-multi" style={{ position: 'relative', width: '100%', textAlign: 'center' }}>
+              <button onClick={() => setCurrentImgTrack((prev) => (prev - 1 + images_track.length) % images_track.length)} style={{ position: 'absolute', left: 0, top: '50%', transform: 'translateY(-50%)', zIndex: 2, fontSize: 24, background: 'rgba(0,0,0,0.3)', border: 'none', color: '#fff', cursor: 'pointer', borderRadius: '50%', width: 36, height: 36, lineHeight: '36px' }}>&lt;</button>
+              <img src={images_track[currentImgTrack].src} alt={images_track[currentImgTrack].alt} className='hien-thi-hinh-projects' />
+              <button onClick={() => setCurrentImgTrack((prev) => (prev + 1) % images_track.length)} style={{ position: 'absolute', right: 0, top: '50%', transform: 'translateY(-50%)', zIndex: 2, fontSize: 24, background: 'rgba(0,0,0,0.3)', border: 'none', color: '#fff', cursor: 'pointer', borderRadius: '50%', width: 36, height: 36, lineHeight: '36px' }}>&gt;</button>
+            </div>
+            <h3>CARDIO-TRACK (Web Nhà thuốc)</h3>
+            <p>BE: Spring Boot, AWS (S3 - lưu trữ hình ảnh), OpenAI (chuẩn đoán sức khỏe qua bài test)<br/>FE: ReactJS, WebSocket (chat & realtime), Twin.js (hiệu ứng động UI)</p>
+          </div>
         </div>
       </section>
+
+
+      {/* --- Contact us SECTION --- */}
+      <section id="contact" className="contact-section">
+        <h2>Contact</h2>
+        <p className="contact-intro">Feel free to reach out for collaboration, questions, or opportunities!</p>
+        <div className="contact-card">
+          <div className="contact-info">
+            <i className="fas fa-user"></i>
+            <span>Trần Trọng Tín</span>
+          </div>
+          <div className="contact-info">
+          <i className="fas fa-envelope"></i>
+          <a href="mailto:trantin1973@gmail.com">trantin1973@gmail.com</a>
+        </div>
+        <div className='cantact-info'>
+          <i className="fab fa-github"></i>
+          <a href="https://github.com/trongtinIUH" target="_blank" rel="noopener noreferrer">github.com/trongtinIUH</a> 
+        </div>
+        <div className='contact-info'>
+          <i className="fab fa-linkedin"></i>
+          <a href="https://www.linkedin.com/in/t%C3%ADn-tr%E1%BA%A7n-tr%E1%BB%8Dng-b05549367/" target="_blank" rel="noopener noreferrer">linkedin.com/in/trongtinIUH</a>
+        </div>
+        </div>
+      </section>
+
+
+
+      
+      <footer className="footer-copyright">
+        &copy; {new Date().getFullYear()} Tran Trong Tin. All rights reserved.
+      </footer>
 
     </div>
   );
